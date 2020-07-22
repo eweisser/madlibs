@@ -1,0 +1,404 @@
+<html>
+<head>
+<title>Mad Libs!</title>
+<meta charset="utf-8">
+
+<style>
+
+body {
+font-size: 20px;
+}
+
+#menu {
+background-color: #FFFFFF;
+font-family: 'Arial';
+position: relative;
+/* border: 1px solid #00008F; */
+padding: 10px;
+width: 95%;
+display: block;
+}
+
+p {
+height: 20px;
+width: 5%;
+margin: 5px;
+padding: 2px;
+}
+
+button {
+margin-top: 20px;
+margin-left: 20px;
+}
+
+#madLibForm {
+display: none;
+}
+
+#story {
+display: none;
+}
+    
+#grammarBox {
+border: 1px solid #FF0000;
+padding: 10px;
+position: fixed;
+right: 50px;
+top: 20px;
+}
+
+.specificForm {
+display: none;
+}    
+
+</style>
+
+</head>
+
+<body>
+
+<div id='menu'>
+<b>Mad Libs!</b>
+<p id='choice01' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(1)'>#1</p>
+<p id='choice02' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(2)'>#2</p>
+<p id='choice03' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(3)'>#3</p>
+<p id='choice04' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(4)'>#4</p>
+<p id='choice05' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(5)'>#5</p>
+<p id='choice06' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(6)'>#6</p>
+<p id='choice07' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(7)'>#7</p>
+<p id='choice08' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(8)'>#8</p>
+<p id='choice09' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(9)'>#9</p>
+<p id='choice10' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(10)'>#10</p>
+</div>
+
+
+
+<div id="madLibForm">
+
+<div id="form1" class="specificForm">
+<span>a name:</span>
+<input type="text" id="input0101" autofocus><br>
+<span>a vegetable:</span>
+<input type="text" id="input0102"><br>
+<span>something to say:</span>
+<input type="text" id="input0103"><br>
+<span>a language:</span>
+<input type="text" id="input0104"><br>
+<span>a kind of food:</span>
+<input type="text" id="input0105"><br>
+<span>noun:</span>
+<input type="text" id="input0106"><br>
+<span>verb:</span>
+<input type="text" id="input0107"><br>
+<span>verb:</span>
+<input type="text" id="input0108"><br>
+<span>plural noun:</span>
+<input type="text" id="input0109"><br>
+<span>adjective:</span>
+<input type="text" id="input0110"><br>
+</div>
+
+<div id="form2" class="specificForm">
+<span>adjective:</span>
+<input type="text" id="input0201" autofocus><br>
+<span>animal:</span>
+<input type="text" id="input0202"><br>
+<span>verb:</span>
+<input type="text" id="input0203"><br>
+<span>noun:</span>
+<input type="text" id="input0204"><br>
+<span>kind of place:</span>
+<input type="text" id="input0205"><br>
+<span>name:</span>
+<input type="text" id="input0206"><br>
+<span>place name:</span>
+<input type="text" id="input0207"><br>
+<span>adjective:</span>
+<input type="text" id="input0208"><br>
+<span>plural animals:</span>
+<input type="text" id="input0209"><br>
+<span>adjective:</span>
+<input type="text" id="input0210"><br>
+<span>kind of food:</span>
+<input type="text" id="input0211">
+</div>
+
+<div id="form3" class="specificForm">
+<span>time:</span>
+<input type="text" id="input0301" autofocus><br>
+<span>kind of food:</span>
+<input type="text" id="input0302"><br>
+<span>plural noun:</span>
+<input type="text" id="input0303"><br>
+<span>verb:</span>
+<input type="text" id="input0304"><br>
+<span>kind of clothes:</span>
+<input type="text" id="input0305"><br>
+<span>kind of animal:</span>
+<input type="text" id="input0306"><br>
+<span>adjective:</span>
+<input type="text" id="input0307"><br>
+<span>verb:</span>
+<input type="text" id="input0308"><br>
+<span>anything:</span>
+<input type="text" id="input0309"><br>
+<span>color:</span>
+<input type="text" id="input0310"><br>
+<span>plural noun:</span>
+<input type="text" id="input0311"><br>
+<span>famous person:</span>
+<input type="text" id="input0312"><br>
+<span>activity, starting with a verb:</span>
+<input type="text" id="input0313">
+</div>
+
+<div id="form4" class="specificForm">
+<span>name:</span>
+<input type="text" id="input0401" autofocus><br>
+<span>kind of animal:</span>
+<input type="text" id="input0402"><br>
+<span>superlative adjective:</span>
+<input type="text" id="input0403"><br>
+<span>verb:</span>
+<input type="text" id="input0404"><br>
+<span>verb (-ing):</span>
+<input type="text" id="input0405"><br>
+<span>noun:</span>
+<input type="text" id="input0406"><br>
+<span>adjective:</span>
+<input type="text" id="input0407"><br>
+<span>verb:</span>
+<input type="text" id="input0408"><br>
+<span>kind of food:</span>
+<input type="text" id="input0409"><br>
+<span>verb:</span>
+<input type="text" id="input0410"><br>
+<span>verb:</span>
+<input type="text" id="input0411"><br>
+<span>adjective:</span>
+<input type="text" id="input0412">
+</div>
+
+<div id="form5" class="specificForm">
+<span>kind of place:</span>
+<input type="text" id="input0501" autofocus><br>
+<span>kind of vehicle:</span>
+<input type="text" id="input0502"><br>
+<span>number:</span>
+<input type="text" id="input0503"><br>
+<span>something to say:</span>
+<input type="text" id="input0504"><br>
+<span>noun:</span>
+<input type="text" id="input0505"><br>
+<span>adjective:</span>
+<input type="text" id="input0506"><br>
+<span>adjective:</span>
+<input type="text" id="input0507"><br>
+<span>kind of food (pl. or mass):</span>
+<input type="text" id="input0508"><br>
+<span>name:</span>
+<input type="text" id="input0509"><br>
+<span>kind of food (pl. or mass):</span>
+<input type="text" id="input0510"><br>
+<span>plural noun:</span>
+<input type="text" id="input0511"><br>
+<span>place name:</span>
+<input type="text" id="input0512"><br>
+<span>number:</span>
+<input type="text" id="input0513"><br>
+<span>adjective:</span>
+<input type="text" id="input0514"><br>
+<span>plural noun:</span>
+<input type="text" id="input0515">
+</div>
+    
+<div id="form6" class="specificForm">
+<span>kind of food you make:</span>
+<input type="text" id="input0601" autofocus><br>
+<span>kind of food (pl. or mass):</span>
+<input type="text" id="input0602"><br>
+<span>kind of food (pl. or mass):</span>
+<input type="text" id="input0603"><br>
+<span>noun:</span>
+<input type="text" id="input0604"><br>
+<span>adjective:</span>
+<input type="text" id="input0605"><br>
+<span>noun:</span>
+<input type="text" id="input0606"><br>
+<span>number:</span>
+<input type="text" id="input0607"><br>
+<span>verb:</span>
+<input type="text" id="input0608"><br>
+<span>adjective:</span>
+<input type="text" id="input0609"><br>
+<span>verb:</span>
+<input type="text" id="input0610"><br>
+<span>kind of food (pl. or mass):</span>
+<input type="text" id="input0611"><br>
+<span>color:</span>
+<input type="text" id="input0612"><br>
+<span>kind of food (pl. or mass):</span>
+<input type="text" id="input0613"><br>
+<span>kind of animal:</span>
+<input type="text" id="input0614">
+</div>
+    
+<div id="form7" class="specificForm">
+<span>noun (pl. or mass):</span>
+<input type="text" id="input0701" autofocus><br>
+<span>noun (pl. or mass):</span>
+<input type="text" id="input0702"><br>
+<span>verb:</span>
+<input type="text" id="input0703"><br>
+<span>color:</span>
+<input type="text" id="input0704"><br>
+<span>verb, 3sg.:</span>
+<input type="text" id="input0705"><br>
+<span>adjective:</span>
+<input type="text" id="input0706"><br>
+<span>kind of food (pl. or mass):</span>
+<input type="text" id="input0707"><br>
+<span>adjective:</span>
+<input type="text" id="input0708"><br>
+<span>verb:</span>
+<input type="text" id="input0709"><br>
+<span>verb:</span>
+<input type="text" id="input0710"><br>
+<span>noun:</span>
+<input type="text" id="input0711"><br>
+<span>noun:</span>
+<input type="text" id="input0712"><br>
+<span>verb:</span>
+<input type="text" id="input0713">
+</div>
+    
+<div id="form8" class="specificForm">
+<span>kind of animal:</span>
+<input type="text" id="input0801" autofocus><br>
+<span>noun:</span>
+<input type="text" id="input0802"><br>
+<span>adjective:</span>
+<input type="text" id="input0803"><br>
+<span>adjective:</span>
+<input type="text" id="input0804"><br>
+<span>verb, -ing:</span>
+<input type="text" id="input0805"><br>
+<span>sound word:</span>
+<input type="text" id="input0806"><br>
+<span>place name:</span>
+<input type="text" id="input0807"><br>
+<span>adjective:</span>
+<input type="text" id="input0808"><br>
+<span>verb:</span>
+<input type="text" id="input0809"><br>
+<span>verb:</span>
+<input type="text" id="input0810"><br>
+<span>noun (pl. or mass):</span>
+<input type="text" id="input0811"><br>
+<span>verb:</span>
+<input type="text" id="input0812"><br>
+<span>verb:</span>
+<input type="text" id="input0813"><br>
+<span>verb:</span>
+<input type="text" id="input0814"><br>
+<span>noun:</span>
+<input type="text" id="input0815">
+</div>
+    
+<div id="form9" class="specificForm">
+<span>animal or food:</span>
+<input type="text" id="input0901" autofocus><br>
+<span>adjective:</span>
+<input type="text" id="input0902"><br>
+<span>adjective:</span>
+<input type="text" id="input0903"><br>
+<span>adjective:</span>
+<input type="text" id="input0904"><br>
+<span>kind of person:</span>
+<input type="text" id="input0905"><br>
+<span>animal:</span>
+<input type="text" id="input0906"><br>
+<span>number:</span>
+<input type="text" id="input0907"><br>
+<span>adjective:</span>
+<input type="text" id="input0908"><br>
+<span>verb:</span>
+<input type="text" id="input0909"><br>
+<span>adjective:</span>
+<input type="text" id="input0910"><br>
+<span>adverb:</span>
+<input type="text" id="input0911"><br>
+<span>noun:</span>
+<input type="text" id="input0912">
+</div>    
+
+<button type="button" id="letsGoButton" onClick='doML()'>Let's go!</button>
+</div>
+
+<div id="story">
+</div>
+    
+<div id="grammarBox">
+    <b>Remember!</b><br>Noun = 명사<br>Verb = 동사<br>Adjective: 형용사
+</div>
+
+
+<script>
+
+function mOver(x) {
+	x.style.backgroundColor = "#30A8FF";
+	x.style.color = "#FFFFFF";
+}
+
+function mOut(x) {
+	x.style.backgroundColor = "#FFFFFF";
+	x.style.color = "#000000";
+}
+
+function goToMLform(storyNumber) {
+    document.getElementById('menu').style.display = 'none';
+    document.getElementById('madLibForm').style.display = 'block';
+    document.getElementById('form' + storyNumber).style.display = 'block';
+    document.getElementById('letsGoButton').setAttribute('onClick','doML(' + storyNumber + ')');
+}
+
+function doML(storyNumber) {
+    document.getElementById('story').style.display = 'block';
+    document.getElementById('madLibForm').style.display = 'none';
+    document.getElementById('grammarBox').style.display = 'none';
+    switch(storyNumber) {
+        case 1:
+            document.getElementById('story').innerHTML = "<b>IN SPACE</b><br><br>One day, an astronaut named " + document.getElementById('input0101').value + " took a rocket to outer space. " + document.getElementById('input0101').value + "'s mission was to be the first person on Mars. They landed on Mars and soon found an alien that looked just like a " + document.getElementById('input0102').value + ". The alien said, \"" + document.getElementById('input0103').value + "!\" " + document.getElementById('input0101').value + " said hello and asked, \"Do you speak " + document.getElementById('input0104').value + "?\" Then " + document.getElementById('input0101').value + " gave the alien some " + document.getElementById('input0105').value + ", but the alien ate " + document.getElementById('input0101').value + "'s " + document.getElementById('input0106').value + " instead! \"Oh no!\" " + document.getElementById('input0101').value +" said. \"I need that to " + document.getElementById('input0107').value + "!\"<br>\"It's okay, I will help you " + document.getElementById('input0108').value + ",\" said the alien. \"Thank you so much,\" said " + document.getElementById('input0101').value + ". \"If you ever visit Earth, come see me, and I will give you some " + document.getElementById('input0109').value + "!\"<br>\"That would make me " + document.getElementById('input0110').value + ",\" said the alien.";
+            break;
+        case 2:
+            document.getElementById('story').innerHTML = "<b>Listen up!</b><br><br>I just heard about a great new musical group you should listen to! They are called " + document.getElementById('input0201').value + " " + document.getElementById('input0202').value + ", and I really like their sound. Their hit song, \"I will " + document.getElementById('input0203').value + " a " + document.getElementById('input0204').value + " For You\", is so famous that you can hear it everywhere, even at the " + document.getElementById('input0205').value + "! I heard that one of the members, " + document.getElementById('input0206').value + ", is going to give a concert in " + document.getElementById('input0207').value + " and give all the money from the concert to " + document.getElementById('input0208').value + " " + document.getElementById('input0209').value + ". That is such a " + document.getElementById('input0210').value + " idea! I think I will go listen to their newest song, \"Ramyeon Ramyeon " + document.getElementById('input0211').value + " Ramyeon\", right now!";
+            break;
+        case 3:
+            document.getElementById('story').innerHTML = '<b>If I were in charge...</b><br><br>Sometimes, it feels like everyone tells me what to do. But if I were a mom or dad, I could be in charge. I could go to bed at ' + document.getElementById('input0301').value + ' and eat ' + document.getElementById('input0302').value + ' all day.<br>But I should think big! If I were in charge of the school, I could put ' + document.getElementById('input0303').value + ' in every classroom. The students would be allowed to ' + document.getElementById('input0304').value + ' whenever they want, and the teachers would have to wear ' + document.getElementById('input0305').value + ' with pictures of ' + document.getElementById('input0306').value + ' on them. I think the teachers would be very ' + document.getElementById('input0307').value + '.<br>Or maybe I could be the president of Korea! If I were the president of Korea, I would tell all Koreans to ' + document.getElementById('input0308').value + ' every day. I would change the national song to "' + document.getElementById('input0309').value + '". I would fly around in my private airplane, painted ' + document.getElementById('input0310').value + ', and I would drop ' + document.getElementById('input0311').value + ' from the sky. Finally, I would invite ' + document.getElementById('input0312').value + ' to come with me and ' + document.getElementById('input0313').value + '.';
+            break;
+        case 4:
+            document.getElementById('story').innerHTML = '<b>My new pet!</b><br><br>I got a new pet today! Its name is ' + document.getElementById('input0401').value + ', and it\'s a ' + document.getElementById('input0402').value + '. I love ' + document.getElementById('input0402').value + 's, and ' + document.getElementById('input0401').value + ' is the ' + document.getElementById('input0403').value + ' ' + document.getElementById('input0402').value + ' because ' + document.getElementById('input0401').value + ' can ' + document.getElementById('input0404').value + '. Actually, ' + document.getElementById('input0401').value + ' loves to ' + document.getElementById('input0404').value + ' while ' + document.getElementById('input0405').value + ' ' + document.getElementById('input0406').value + '.<br>Next week, I will invite all of my friends to my home to see ' + document.getElementById('input0401').value + '. I think when they see my new pet, they will feel very ' + document.getElementById('input0407').value + '. I will teach ' + document.getElementById('input0401').value + ' how to ' + document.getElementById('input0408').value + ', so all of my friends can watch. Maybe I will let them feed ' + document.getElementById('input0401').value + ' some ' +document.getElementById('input0409').value + '. Did you know if you feed a ' + document.getElementById('input0402').value + ' ' + document.getElementById('input0409').value + ', it will ' + document.getElementById('input0410').value + '? It\'s true! I want ' + document.getElementById('input0401').value + ' to grow big and strong so that one day, we can ' + document.getElementById('input0411').value + ' together. It will be a ' + document.getElementById('input0412').value + ' day.';
+            break;
+        case 5:
+            document.getElementById('story').innerHTML = '<b>A great field trip!</b><br><br>Yesterday my class went on a field trip to a ' + document.getElementById('input0501').value + '. It was so much fun! We all got into a ' + document.getElementById('input0502').value + '. It took ' + document.getElementById('input0503').value + ' hours to get to the ' + document.getElementById('input0501').value + ', but it was worth it! We got out of the ' + document.getElementById('input0502').value + ', and walked in. First, a man there said "' + document.getElementById('input0504').value + '!" He showed us around the ' + document.getElementById('input0501').value + '. There was a very big ' + document.getElementById('input0505').value + ' in the middle of the room. The man pointed at it and said, "Isn\'t it ' + document.getElementById('input0506').value + '? It makes us very ' + document.getElementById('input0507').value + '!" Next, we walked to another room and we all ate ' + document.getElementById('input0508').value + '. My friend ' + document.getElementById('input0509').value + ' doesn\'t like ' + document.getElementById('input0508').value + ', so ' + document.getElementById('input0509').value + ' asked for something different to eat. The man gave ' + document.getElementById('input0509').value + ' some ' + document.getElementById('input0510').value + ' instead.<br>After we ate, we watched a short movie about ' + document.getElementById('input0511').value + '. It was really interesting! I learned that ' + document.getElementById('input0511').value + ' come from ' + document.getElementById('input0512').value + '. In ' + document.getElementById('input0512').value + ', everyone loves ' + document.getElementById('input0511').value + ' so much that everyone has ' + document.getElementById('input0513').value + ' ' + document.getElementById('input0511').value + ' at home.<br>It was a great field trip, but I felt tired and ' + document.getElementById('input0514').value + ', so I was glad that it was time to go back to school. We all got back in the ' + document.getElementById('input0502').value + ' and said goodbye. The man said "Goodbye, ' + document.getElementById('input0515').value + '!". What a fun day!';
+            break;
+        case 6:
+            document.getElementById('story').innerHTML = '<b>A recipe</b><br><br>Hello! Today I\'d like to tell you my recipe for '+document.getElementById('input0601').value+'. First, you need to get all your ingredients. "Ingredients" means all the food you put together to make some new kind of food. For this recipe, you will need '+document.getElementById('input0602').value+', '+document.getElementById('input0603').value+', and some rice. Put them in a big bowl and mix them together with a big '+document.getElementById('input0604').value+'. If you want to make your '+document.getElementById('input0601').value+' very '+document.getElementById('input0605').value+', you should add a little bit of '+document.getElementById('input0606').value+' in the bowl. Next, put it in the refrigerator for '+document.getElementById('input0607').value+' minutes. While you are waiting, you can '+document.getElementById('input0608').value+'. After '+document.getElementById('input0607').value+' minutes, take it out of the refrigerator. Look at it and see if the food is '+document.getElementById('input0609').value+'.<br>If it\'s not '+document.getElementById('input0609').value+', put it back in the refrigerator and '+document.getElementById('input0610').value+'.<br>Put a little '+document.getElementById('input0611').value+' in a frying pan and pour everything into the pan. Cook the food until it turns '+document.getElementById('input0612').value+'. Add some '+document.getElementById('input0613').value+' on top and share it with your favorite '+document.getElementById('input0614').value+'. Enjoy!';
+            break;
+        case 7:
+            document.getElementById('story').innerHTML = '<b>Inside the human body</b><br><br>Do you know what happens inside the human body, and how it works? It\'s fascinating! Your heart pumps '+document.getElementById('input0701').value+' everywhere in your body so that your body parts can all have '+document.getElementById('input0702').value+'. It works very hard, even when you '+document.getElementById('input0703').value+'! '+document.getElementById('input0701').value+' has to go into your lungs, where it gets the '+document.getElementById('input0702').value+' and turns '+document.getElementById('input0704').value+'.<br>When you eat food, it goes to your stomach and '+document.getElementById('input0705').value+'. It\'s very important that it '+document.getElementById('input0705').value+' so that it will be '+document.getElementById('input0706').value+'. After it\'s in the stomach, all of the healthy things in the food go into your '+document.getElementById('input0701').value+'. So remember to eat healthy food like '+document.getElementById('input0707').value+'!<br>How does your body know to do all of this? It\'s because your brain says so! Your brain is very '+document.getElementById('input0708').value+'. It tells your body to '+document.getElementById('input0709').value+'. It says, "Body! You should '+document.getElementById('input0709').value+'!" And then your body does it.<br>Sometimes bad things get inside of you, and your body has to fight them, clean them, or '+document.getElementById('input0710').value+' them with a '+document.getElementById('input0711').value+'. You have special body parts like your liver, blood cells, and '+document.getElementById('input0712').value+' to do this.<br>Remember, if you don\'t take care of your body, you might '+document.getElementById('input0713').value+'!';
+            break;
+        case 8:
+            document.getElementById('story').innerHTML = '<b>My new favorite song!</b><br><br>I\'m just a '+document.getElementById('input0801').value+', looking for a '+document.getElementById('input0802').value+'<br>I\'m so '+document.getElementById('input0803').value+'<br> '+document.getElementById('input0803').value+', I\'m '+document.getElementById('input0803').value+'<br>My heart is '+document.getElementById('input0804').value+', my heart is '+document.getElementById('input0805').value+'<br>It\'s going '+document.getElementById('input0806').value+', '+document.getElementById('input0806').value+', '+document.getElementById('input0806').value+'<br>My heart says 운명 will take you and me to '+document.getElementById('input0807').value+'<br><br>I think you\'re '+document.getElementById('input0808').value+'<br>Why do you '+document.getElementById('input0809').value+' me?<br>If you want to '+document.getElementById('input0810').value+' '+document.getElementById('input0811').value+', don\'t forget to '+document.getElementById('input0812').value+'.<br>All day, I '+document.getElementById('input0813').value+', I just '+document.getElementById('input0813').value+'<br>My heart is '+document.getElementById('input0804').value+', it\'s '+document.getElementById('input0805').value+'<br>Let\'s '+document.getElementById('input0814').value+' together<br><br>Just tell me...<br><br>You\'ll be my '+document.getElementById('input0815').value
+            break;
+        case 9:
+            document.getElementById('story').innerHTML = '<b>Halloween night!</b><br><br>Do you like Halloween? I do! The only day I like better is '+document.getElementById('input0901').value[0].toUpperCase()+document.getElementById('input0901').value.substring(1)+' Day.<br>Last Halloween, some very '+document.getElementById('input0902').value+' things happened. I wore a '+document.getElementById('input0903').value+' '+document.getElementById('input0904').value+' '+document.getElementById('input0905').value+' '+document.getElementById('input0906').value+' costume. Everyone thought it looked really funny! But that night, I saw '+document.getElementById('input0907').value+' monsters. They had three eyes, big yellow teeth, and '+document.getElementById('input0908').value+' shoes. I stood behind a tree so they wouldn\'t see me. Then they all ran away, except for one monster. I heard it crying, so I walked to it!<br>"Why are you crying?" I asked.<br>"All the other monsters are '+document.getElementById('input0909').value+'ing, but they said I\'m too little and too '+document.getElementById('input0910').value+'.\"<br>\"You can '+document.getElementById('input0909').value+' with me!" I said. "Then all the monsters will see that you can '+document.getElementById('input0909').value+' '+document.getElementById('input0911').value+'."<br>So the little monster '+document.getElementById('input0909').value+'ed and I did too. We had so much fun! It was a great Halloween. I think the little monster ate all my candy, but it gave me a present! I was so excited when I opened the box and saw it was a '+document.getElementById('input0912').value+'.'
+            break;
+    }
+    document.getElementById('story').innerHTML += "<br><br><b>THE END</b>";
+}
+
+</script>
+
+</body>
+</html>
