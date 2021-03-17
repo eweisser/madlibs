@@ -38,7 +38,7 @@ display: none;
 #story {
 display: none;
 }
-    
+
 #grammarBox {
 border: 1px solid #FF0000;
 padding: 10px;
@@ -49,7 +49,7 @@ top: 20px;
 
 .specificForm {
 display: none;
-}    
+}
 
 </style>
 
@@ -69,6 +69,8 @@ display: none;
 <p id='choice08' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(8)'>#8</p>
 <p id='choice09' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(9)'>#9</p>
 <p id='choice10' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(10)'>#10</p>
+<p id='choice11' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(11)'>#11</p>
+<p id='choice12' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(12)'>#12</p>
 </div>
 
 
@@ -211,7 +213,7 @@ display: none;
 <span>plural noun:</span>
 <input type="text" id="input0515">
 </div>
-    
+
 <div id="form6" class="specificForm">
 <span>kind of food you make:</span>
 <input type="text" id="input0601" autofocus><br>
@@ -242,7 +244,7 @@ display: none;
 <span>kind of animal:</span>
 <input type="text" id="input0614">
 </div>
-    
+
 <div id="form7" class="specificForm">
 <span>noun (pl. or mass):</span>
 <input type="text" id="input0701" autofocus><br>
@@ -271,7 +273,7 @@ display: none;
 <span>verb:</span>
 <input type="text" id="input0713">
 </div>
-    
+
 <div id="form8" class="specificForm">
 <span>kind of animal:</span>
 <input type="text" id="input0801" autofocus><br>
@@ -304,7 +306,7 @@ display: none;
 <span>noun:</span>
 <input type="text" id="input0815">
 </div>
-    
+
 <div id="form9" class="specificForm">
 <span>animal or food:</span>
 <input type="text" id="input0901" autofocus><br>
@@ -330,14 +332,106 @@ display: none;
 <input type="text" id="input0911"><br>
 <span>noun:</span>
 <input type="text" id="input0912">
-</div>    
+</div>
+
+<div id="form10" class="specificForm">
+<span>new word:</span>
+<input type="text" id="input1001" autofocus><br>
+<span>kind of food:</span>
+<input type="text" id="input1002"><br>
+<span>mass or plural noun:</span>
+<input type="text" id="input1003"><br>
+<span>name of someone you know:</span>
+<input type="text" id="input1004"><br>
+<span>adjective:</span>
+<input type="text" id="input1005"><br>
+<span>color:</span>
+<input type="text" id="input1006"><br>
+<span>emotion adjective:</span>
+<input type="text" id="input1007"><br>
+<span>something to say:</span>
+<input type="text" id="input1008"><br>
+<span>adjective:</span>
+<input type="text" id="input1009"><br>
+<span>plural fruit or vegetable:</span>
+<input type="text" id="input1010">
+</div>
+
+<div id="form11" class="specificForm">
+<span>adjective:</span>
+<input type="text" id="input1101" autofocus><br>
+<span>name:</span>
+<input type="text" id="input1102"><br>
+<span>animal:</span>
+<input type="text" id="input1103"><br>
+<span>country:</span>
+<input type="text" id="input1104"><br>
+<span>verb (transitive):</span>
+<input type="text" id="input1105"><br>
+<span>noun (plural or mass):</span>
+<input type="text" id="input1106"><br>
+<span>animal:</span>
+<input type="text" id="input1107"><br>
+<span>name:</span>
+<input type="text" id="input1108"><br>
+<span>animal:</span>
+<input type="text" id="input1109"><br>
+<span>name:</span>
+<input type="text" id="input1110"><br>
+<span>job (plural):</span>
+<input type="text" id="input1111"><br>
+<span>verb (transitive):</span>
+<input type="text" id="input1112"><br>
+<span>noun (plural or mass):</span>
+<input type="text" id="input1113"><br>
+<span>number:</span>
+<input type="text" id="input1114">
+</div>
+
+<div id="form12" class="specificForm">
+<span>noun:</span>
+<input type="text" id="input1201" autofocus><br>
+
+<span>adjective:</span>
+<input type="text" id="input1202"><br>
+
+<span>person:</span>
+<input type="text" id="input1203"><br>
+
+<span>adjective:</span>
+<input type="text" id="input1204"><br>
+
+<span>noun:</span>
+<input type="text" id="input1205"><br>
+
+<span>name:</span>
+<input type="text" id="input1206"><br>
+
+<span>kind of Korean food:</span>
+<input type="text" id="input1207"><br>
+
+<span>kind of vehicle/transportation:</span>
+<input type="text" id="input1208"><br>
+
+<span>noun:</span>
+<input type="text" id="input1209"><br>
+
+<span>animal:</span>
+<input type="text" id="input1210"><br>
+
+<span>verb:</span>
+<input type="text" id="input1211"><br>
+
+<span>kind of food:</span>
+<input type="text" id="input1212">
+</div>
 
 <button type="button" id="letsGoButton" onClick='doML()'>Let's go!</button>
 </div>
 
 <div id="story">
 </div>
-    
+
 <div id="grammarBox">
     <b>Remember!</b><br>Noun = 명사<br>Verb = 동사<br>Adjective: 형용사
 </div>
@@ -392,11 +486,34 @@ function doML(storyNumber) {
             document.getElementById('story').innerHTML = '<b>My new favorite song!</b><br><br>I\'m just a '+document.getElementById('input0801').value+', looking for a '+document.getElementById('input0802').value+'<br>I\'m so '+document.getElementById('input0803').value+'<br> '+document.getElementById('input0803').value+', I\'m '+document.getElementById('input0803').value+'<br>My heart is '+document.getElementById('input0804').value+', my heart is '+document.getElementById('input0805').value+'<br>It\'s going '+document.getElementById('input0806').value+', '+document.getElementById('input0806').value+', '+document.getElementById('input0806').value+'<br>My heart says 운명 will take you and me to '+document.getElementById('input0807').value+'<br><br>I think you\'re '+document.getElementById('input0808').value+'<br>Why do you '+document.getElementById('input0809').value+' me?<br>If you want to '+document.getElementById('input0810').value+' '+document.getElementById('input0811').value+', don\'t forget to '+document.getElementById('input0812').value+'.<br>All day, I '+document.getElementById('input0813').value+', I just '+document.getElementById('input0813').value+'<br>My heart is '+document.getElementById('input0804').value+', it\'s '+document.getElementById('input0805').value+'<br>Let\'s '+document.getElementById('input0814').value+' together<br><br>Just tell me...<br><br>You\'ll be my '+document.getElementById('input0815').value
             break;
         case 9:
-            document.getElementById('story').innerHTML = '<b>Halloween night!</b><br><br>Do you like Halloween? I do! The only day I like better is '+document.getElementById('input0901').value[0].toUpperCase()+document.getElementById('input0901').value.substring(1)+' Day.<br>Last Halloween, some very '+document.getElementById('input0902').value+' things happened. I wore a '+document.getElementById('input0903').value+' '+document.getElementById('input0904').value+' '+document.getElementById('input0905').value+' '+document.getElementById('input0906').value+' costume. Everyone thought it looked really funny! But that night, I saw '+document.getElementById('input0907').value+' monsters. They had three eyes, big yellow teeth, and '+document.getElementById('input0908').value+' shoes. I stood behind a tree so they wouldn\'t see me. Then they all ran away, except for one monster. I heard it crying, so I walked to it!<br>"Why are you crying?" I asked.<br>"All the other monsters are '+document.getElementById('input0909').value+'ing, but they said I\'m too little and too '+document.getElementById('input0910').value+'.\"<br>\"You can '+document.getElementById('input0909').value+' with me!" I said. "Then all the monsters will see that you can '+document.getElementById('input0909').value+' '+document.getElementById('input0911').value+'."<br>So the little monster '+document.getElementById('input0909').value+'ed and I did too. We had so much fun! It was a great Halloween. I think the little monster ate all my candy, but it gave me a present! I was so excited when I opened the box and saw it was a '+document.getElementById('input0912').value+'.'
+            document.getElementById('story').innerHTML = '<b>Halloween night!</b><br><br>Do you like Halloween? I do! The only day I like better is '+document.getElementById('input0901').value[0].toUpperCase()+document.getElementById('input0901').value.substring(1)+' Day.<br>Last Halloween, some very '+document.getElementById('input0902').value+' things happened. I wore a '+document.getElementById('input0903').value+' '+document.getElementById('input0904').value+' '+document.getElementById('input0905').value+' '+document.getElementById('input0906').value+' costume. Everyone thought it looked really funny! But that night, I saw '+document.getElementById('input0907').value+' monsters. They had three eyes, big yellow teeth, and '+document.getElementById('input0908').value+' shoes. I stood behind a tree so they wouldn\'t see me. Then they all ran away, except for one monster. I heard it crying, so I walked to it!<br>"Why are you crying?" I asked.<br>"All the other monsters are '+document.getElementById('input0909').value+'ing, but they said I\'m too little and too '+document.getElementById('input0910').value+'.\"<br>\"You can '+document.getElementById('input0909').value+' with me!" I said. "Then all the monsters will see that you can '+document.getElementById('input0909').value+' '+document.getElementById('input0911').value+'."<br>So the little monster '+document.getElementById('input0909').value+'ed and I did too. We had so much fun! It was a great Halloween. I think the little monster ate all my candy, but it gave me a present! I was so excited when I opened the box and saw it was a '+document.getElementById('input0912').value+'.';
             break;
+        case 10:
+            document.getElementById('story').innerHTML = '<b>A new color!</b><br><br>Everyone knows the colors of the rainbow--red, green, blue, and the rest. But that\'s not all. You might not believe it, but I invented a new color! It\'s called \"'+document.getElementById('input1001').value+'\", and I made it by mixing '+document.getElementById('input1002').value+' with '+document.getElementById('input1003').value+'. '+document.getElementById('input1004').value+' thought I was just making a big mess, but '+document.getElementById('input1001').value+' is actually a '+document.getElementById('input1005').value+' color! Some day, I will paint my house '+document.getElementById('input1001').value+', maybe with a '+document.getElementById('input1006').value+' roof. Everyone who walks by will feel '+document.getElementById('input1007').value+' and say \"'+document.getElementById('input1008').value+'! That house is so '+document.getElementById('input1009').value+'!\" Pretty soon, everyone will have '+document.getElementById('input1001').value+' cars and '+document.getElementById('input1001').value+' clothes, and maybe even '+document.getElementById('input1001').value+' hair! So next time you buy crayons, paint, or even '+document.getElementById('input1010').value+', you should take a look and see if there\'s any '+document.getElementById('input1001').value+'!';
+            break;
+        case 11:
+            document.getElementById('story').innerHTML = '<b>A real page-turner</b><br><br>I just read a great new comic book! It\'s called '+document.getElementById('input1101').value+' '+document.getElementById('input1102').value+', and it\'s about a '+document.getElementById('input1103').value+' that goes to '+document.getElementById('input1104').value+' because it wants to '+document.getElementById('input1105').value+' '+document.getElementById('input1106').value+'. In '+document.getElementById('input1104').value+', '+document.getElementById('input1102').value+' meets a '+document.getElementById('input1107').value+' named '+document.getElementById('input1108').value+' and a '+document.getElementById('input1109').value+' named '+document.getElementById('input1110').value+'. '+document.getElementById('input1108').value+' and '+document.getElementById('input1110').value+' want to be famous '+document.getElementById('input1111').value+' and make a new plan every day. I just know you will enjoy it. I think you\'ll want to '+document.getElementById('input1112').value+' it! The strangest thing about this comic book is that it\'s not made of paper—it\'s printed on '+document.getElementById('input1113').value+'! That\'s why it costs $'+document.getElementById('input1114').value+'. It\'s strange, but I love it!';
+            break;
+        case 12:
+            document.getElementById('story').innerHTML = '<b>Four stars!</b><br><br>There\'s a new movie at the theaters! Have you heard of it? It\'s called "The Big '+document.getElementById('input1201').value+'", and it\'s very '+document.getElementById('input1202').value+'. My favorite actor, '+document.getElementById('input1203').value+', is in it. '+document.getElementById('input1203').value+'\'s character is a '+document.getElementById('input1204').value+' person who is looking for the best '+document.getElementById('input1205').value+' in the world. '+document.getElementById('input1203').value+'\'s enemy is Mr. '+document.getElementById('input1206').value+', "the '+document.getElementById('input1207').value+' Killer". They punch each other and fight using taekwondo. Mr. '+document.getElementById('input1206').value+' goes away in a '+document.getElementById('input1208').value+'. Suddenly, a wizard comes with a magic '+document.getElementById('input1209').value+'! The wizard gets the best '+document.getElementById('input1205').value+' in the world, and he turns '+document.getElementById('input1203').value+' and Mr. '+document.getElementById('input1206').value+' into '+document.getElementById('input1210').value+'s. '+document.getElementById('input1203').value+' is a '+document.getElementById('input1210').value+', but takes the '+document.getElementById('input1205').value+' and punches the wizard until the wizard gives up.<br>Mr. '+document.getElementById('input1206').value+' finds a girl '+document.getElementById('input1210').value+' and they love each other, so he stops being a bad person. At the end, everyone sings and dances to a song called "Let\'s '+document.getElementById('input1211').value+'".<br>You should watch this movie and eat some '+document.getElementById('input1212').value+'.';
+
     }
     document.getElementById('story').innerHTML += "<br><br><b>THE END</b>";
 }
+
+// Summaries:
+// 1. IN SPACE--astronaut goes to Mars, meets an alien
+// 2. Listen up!--about a new band and their music
+// 3. If I were in charge...
+// 4. My new pet!
+// 5. A great field trip!
+// 6. A recipe
+// 7. Inside the human body
+// 8. My new favorite song!
+// 9. Halloween night!
+// 10. A new color!
+// 11. A real page-turner--about a strange comic book
+// 12. Four stars!--about a movie
 
 </script>
 
