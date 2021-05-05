@@ -71,6 +71,7 @@ display: none;
 <p id='choice10' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(10)'>#10</p>
 <p id='choice11' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(11)'>#11</p>
 <p id='choice12' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(12)'>#12</p>
+<p id='choice13' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(13)'>#13</p>
 </div>
 
 
@@ -426,6 +427,29 @@ display: none;
 <input type="text" id="input1212">
 </div>
 
+<div id="form13" class="specificForm">
+<span>place name:</span>
+<input type="text" id="input1301" autofocus><br>
+<span>adjective:</span>
+<input type="text" id="input1302"><br>
+<span>adjective:</span>
+<input type="text" id="input1303"><br>
+<span>feeling or emotion adjective:</span>
+<input type="text" id="input1304"><br>
+<span>length of time:</span>
+<input type="text" id="input1305"><br>
+<span>name:</span>
+<input type="text" id="input1306"><br>
+<span>kind of animal:</span>
+<input type="text" id="input1307"><br>
+<span>adjective:</span>
+<input type="text" id="input1308"><br>
+<span>kind of food:</span>
+<input type="text" id="input1309"><br>
+<span>kind of food:</span>
+<input type="text" id="input1310">
+</div>
+
 <button type="button" id="letsGoButton" onClick='doML()'>Let's go!</button>
 </div>
 
@@ -496,6 +520,11 @@ function doML(storyNumber) {
             break;
         case 12:
             document.getElementById('story').innerHTML = '<b>Four stars!</b><br><br>There\'s a new movie at the theaters! Have you heard of it? It\'s called "The Big '+document.getElementById('input1201').value+'", and it\'s very '+document.getElementById('input1202').value+'. My favorite actor, '+document.getElementById('input1203').value+', is in it. '+document.getElementById('input1203').value+'\'s character is a '+document.getElementById('input1204').value+' person who is looking for the best '+document.getElementById('input1205').value+' in the world. '+document.getElementById('input1203').value+'\'s enemy is Mr. '+document.getElementById('input1206').value+', "the '+document.getElementById('input1207').value+' Killer". They punch each other and fight using taekwondo. Mr. '+document.getElementById('input1206').value+' goes away in a '+document.getElementById('input1208').value+'. Suddenly, a wizard comes with a magic '+document.getElementById('input1209').value+'! The wizard gets the best '+document.getElementById('input1205').value+' in the world, and he turns '+document.getElementById('input1203').value+' and Mr. '+document.getElementById('input1206').value+' into '+document.getElementById('input1210').value+'s. '+document.getElementById('input1203').value+' is a '+document.getElementById('input1210').value+', but takes the '+document.getElementById('input1205').value+' and punches the wizard until the wizard gives up.<br>Mr. '+document.getElementById('input1206').value+' finds a girl '+document.getElementById('input1210').value+' and they love each other, so he stops being a bad person. At the end, everyone sings and dances to a song called "Let\'s '+document.getElementById('input1211').value+'".<br>You should watch this movie and eat some '+document.getElementById('input1212').value+'.';
+            break;
+        case 13:
+            document.getElementById('story').innerHTML = '<b>On the airplane</b><br><br>I love to fly in airplanes. One time, I took an airplane to '+document.getElementById('input1301').value+' . My vacation in '+document.getElementById('input1301').value+' was good, but the airplane ride was really '+document.getElementById('input1302').value+' ! I sat next to a man with '+document.getElementById('input1303').value+' hair and a little girl who looked very '+document.getElementById('input1304').value+'. We were on the airplane for '+document.getElementById('input1305').value+', so I was glad I had a book. But I took the wrong book! Instead of my favorite story, this book was called "'+document.getElementById('input1306').value+', the '+document.getElementById('input1307').value+' From Outer Space". I didn\'t want to read that. I thought I would just go to sleep, but the man with the '+document.getElementById('input1303').value+' hair said, "Oh! That is a '+document.getElementById('input1308').value+' book! Do you like it?" I told him I didn\'t know the book. He said, "You should read it."<br>So, I opened the book. But then, we all got a snack. The snack was '+document.getElementById('input1309').value+' in '+document.getElementById('input1310').value+' sauce. I looked at the little girl next to me. "Do you want my '+document.getElementById('input1309').value+' in '+document.getElementById('input1310').value+' sauce?" I asked. "Thank you, but I can\'t eat that. I\'m a '+document.getElementById('input1307').value+' from outer space," she said.<br>It was a strange and '+document.getElementById('input1302').value+' time.';
+
+
 
     }
     document.getElementById('story').innerHTML += "<br><br><b>THE END</b>";
@@ -514,6 +543,7 @@ function doML(storyNumber) {
 // 10. A new color!
 // 11. A real page-turner--about a strange comic book
 // 12. Four stars!--about a movie
+// 13. On the airplane
 
 </script>
 
