@@ -72,6 +72,7 @@ display: none;
 <p id='choice11' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(11)'>#11</p>
 <p id='choice12' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(12)'>#12</p>
 <p id='choice13' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(13)'>#13</p>
+<p id='choice14' onmouseover="mOver(this)" onmouseout="mOut(this)" onClick='goToMLform(14)'>#14</p>
 </div>
 
 
@@ -450,6 +451,21 @@ display: none;
 <input type="text" id="input1310">
 </div>
 
+<div id="form14" class="specificForm">
+<span>kind of animal:</span>
+<input type="text" id="input1401" autofocus><br>
+<span>kind of animal:</span>
+<input type="text" id="input1402"><br>
+<span>place of business:</span>
+<input type="text" id="input1403"><br>
+<span>kind of clothes:</span>
+<input type="text" id="input1404"><br>
+<span>kind of clothes:</span>
+<input type="text" id="input1405"><br>
+<span>famous person:</span>
+<input type="text" id="input1406">
+</div>
+
 <button type="button" id="letsGoButton" onClick='doML()'>Let's go!</button>
 </div>
 
@@ -485,6 +501,9 @@ function doML(storyNumber) {
     document.getElementById('madLibForm').style.display = 'none';
     document.getElementById('grammarBox').style.display = 'none';
     switch(storyNumber) {
+        // case 0:
+        //   document.getElementById('story').innerHTML = "<b>xxxxTitlexxxxx</b><br><br>Story text " + document.getElementById('input0001').value + " " + document.getElementById('input0002').value + "text part 2 " + document.getElementById('input0003').value + " more text";
+        //   break;
         case 1:
             document.getElementById('story').innerHTML = "<b>IN SPACE</b><br><br>One day, an astronaut named " + document.getElementById('input0101').value + " took a rocket to outer space. " + document.getElementById('input0101').value + "'s mission was to be the first person on Mars. They landed on Mars and soon found an alien that looked just like a " + document.getElementById('input0102').value + ". The alien said, \"" + document.getElementById('input0103').value + "!\" " + document.getElementById('input0101').value + " said hello and asked, \"Do you speak " + document.getElementById('input0104').value + "?\" Then " + document.getElementById('input0101').value + " gave the alien some " + document.getElementById('input0105').value + ", but the alien ate " + document.getElementById('input0101').value + "'s " + document.getElementById('input0106').value + " instead! \"Oh no!\" " + document.getElementById('input0101').value +" said. \"I need that to " + document.getElementById('input0107').value + "!\"<br>\"It's okay, I will help you " + document.getElementById('input0108').value + ",\" said the alien. \"Thank you so much,\" said " + document.getElementById('input0101').value + ". \"If you ever visit Earth, come see me, and I will give you some " + document.getElementById('input0109').value + "!\"<br>\"That would make me " + document.getElementById('input0110').value + ",\" said the alien.";
             break;
@@ -523,6 +542,9 @@ function doML(storyNumber) {
             break;
         case 13:
             document.getElementById('story').innerHTML = '<b>On the airplane</b><br><br>I love to fly in airplanes. One time, I took an airplane to '+document.getElementById('input1301').value+' . My vacation in '+document.getElementById('input1301').value+' was good, but the airplane ride was really '+document.getElementById('input1302').value+' ! I sat next to a man with '+document.getElementById('input1303').value+' hair and a little girl who looked very '+document.getElementById('input1304').value+'. We were on the airplane for '+document.getElementById('input1305').value+', so I was glad I had a book. But I took the wrong book! Instead of my favorite story, this book was called "'+document.getElementById('input1306').value+', the '+document.getElementById('input1307').value+' From Outer Space". I didn\'t want to read that. I thought I would just go to sleep, but the man with the '+document.getElementById('input1303').value+' hair said, "Oh! That is a '+document.getElementById('input1308').value+' book! Do you like it?" I told him I didn\'t know the book. He said, "You should read it."<br>So, I opened the book. But then, we all got a snack. The snack was '+document.getElementById('input1309').value+' in '+document.getElementById('input1310').value+' sauce. I looked at the little girl next to me. "Do you want my '+document.getElementById('input1309').value+' in '+document.getElementById('input1310').value+' sauce?" I asked. "Thank you, but I can\'t eat that. I\'m a '+document.getElementById('input1307').value+' from outer space," she said.<br>It was a strange and '+document.getElementById('input1302').value+' time.';
+        case 14:
+            document.getElementById('story').innerHTML = "<b>What a joke!</b><br><br>I heard a great new joke the other day! A " + document.getElementById('input1401').value + " and a " + document.getElementById('input1402').value + " walk into a " + document.getElementById('input1403').value + ". A man who works at the " + document.getElementById('input1403').value + " looks at the " + document.getElementById('input1401').value + " and says, \"Go away! No " + document.getElementById('input1401').value + "s in this " + document.getElementById('input1403').value + "!\" So the animals go away. The next day, they come back, but the " + document.getElementById('input1401').value + " is wearing a " + document.getElementById('input1404').value + " and the " + document.getElementById('input1402').value + " is wearing a " + document.getElementById('input1405').value + ". The man looks at them and says, \"Go away! No " + document.getElementById('input1401').value + "s in this " + document.getElementById('input1403').value + "!\" So the animals go away again. The next day, they come back, but the " + document.getElementById('input1401').value + " is wearing a " + document.getElementById('input1406').value + " costume.<br>\"Wow, amazing! Are you really " + document.getElementById('input1406').value + "?\" says the man.<br>\"No, I\'m really a " + document.getElementById('input1401').value + "!\" says the " + document.getElementById('input1401').value + ".";
+            break;
 
 
 
